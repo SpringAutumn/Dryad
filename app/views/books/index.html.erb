@@ -1,0 +1,16 @@
+<h1>Listing Books</h1>
+
+<%= link_to 'New Book', new_book_path %>
+<table>
+	  <tr>
+		      <th>Title</th>
+		      <th>Author</th>
+	  </tr>
+			     
+	  <% @book.each do |book| %>
+			  <tr>
+					<td><%= book.title %></td>
+					<td><%= book.author %></td>
+			  </tr>
+	  <% end %>
+</table>
